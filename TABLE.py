@@ -3,6 +3,7 @@
 
 import pygame
 import time
+import random
 
 pygame.init()
 
@@ -26,15 +27,27 @@ jugadorImag = pygame.image.load('Yo.png')
 jugadorX = 470
 jugadorY = 470
 jugadorX_change = 0
+
+# Añadimos a Lucho
+
+LuchoImag = pygame.image.load('Lucho.png')
+LuchoX = random.randint(0,800)
+LuchoY = random.randint(50,150)
+LuchoX_change = 0
+
 def jugador(x,y):
     screen.blit(jugadorImag, (x, y))
+
+def Lucho(x,y):
+    screen.blit(LuchoImag, (x, y))
+
 
 # Bucle del juego
 running = True
 while running:
 
     # Color fondo R  G  B
-    screen.fill((255,0,0))
+    screen.fill((0,0,0))
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -61,4 +74,5 @@ while running:
         jugadorX = 743
 
     jugador(jugadorX,jugadorY)
+    Lucho(LuchoX,LuchoY)
     pygame.display.update()
