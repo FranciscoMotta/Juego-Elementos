@@ -151,7 +151,7 @@ while running:
             tablaY = 480
             tabla_estado = "listo"
             puntaje_valor += 1
-            LuchoX[counter] = random.randint(0,735)
+            LuchoX[counter] = random.randint(0,730)
             LuchoY[counter] = random.randint(30,100)
 
         Lucho(LuchoX[counter], LuchoY[counter], counter)
