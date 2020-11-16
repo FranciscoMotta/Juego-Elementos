@@ -57,8 +57,8 @@ while running:
 
     if jugadorX <= 0:
         jugadorX = 0
-    elif jugadorX >= 742:
-        jugadorX = 742
+    elif jugadorX >= 743:
+        jugadorX = 743
 
     jugador(jugadorX,jugadorY)
     pygame.display.update()
